@@ -253,7 +253,7 @@ generate_text_report() {
         echo "   Size: $size"
         echo ""
         echo "   Directory Structure:"
-        tree -L "$TREE_MAX_DEPTH" -d "$HOME/Library/Application Support/Cursor" 2>/dev/null | head -50 || find "$HOME/Library/Application Support/Cursor" -type d -maxdepth "$TREE_MAX_DEPTH" 2>/dev/null | head -30
+        tree -L "$TREE_MAX_DEPTH" -d "$HOME/Library/Application Support/Cursor" 2>/dev/null || find "$HOME/Library/Application Support/Cursor" -type d -maxdepth "$TREE_MAX_DEPTH" 2>/dev/null
     fi
     echo ""
 
@@ -299,7 +299,7 @@ generate_text_report() {
     if [ -d "$HOME/Library/Application Support/Cursor/User/workspaceStorage" ] && [ "$workspace_count" -gt 0 ]; then
         echo ""
         echo "   Workspace Storage Structure:"
-        tree -L 2 -d "$HOME/Library/Application Support/Cursor/User/workspaceStorage" 2>/dev/null | head -30 || ls -la "$HOME/Library/Application Support/Cursor/User/workspaceStorage" | head -20
+        tree -L 2 -d "$HOME/Library/Application Support/Cursor/User/workspaceStorage" 2>/dev/null || ls -la "$HOME/Library/Application Support/Cursor/User/workspaceStorage"
     fi
     echo ""
 
@@ -311,7 +311,7 @@ generate_text_report() {
         echo "   Location: ~/Library/Application Support/Cursor/logs/"
         echo ""
         echo "   Log Directory Structure:"
-        tree -L 2 -d "$HOME/Library/Application Support/Cursor/logs" 2>/dev/null | head -20 || ls -la "$HOME/Library/Application Support/Cursor/logs" | head -15
+        tree -L 2 -d "$HOME/Library/Application Support/Cursor/logs" 2>/dev/null || ls -la "$HOME/Library/Application Support/Cursor/logs"
     fi
     echo ""
 
@@ -322,7 +322,7 @@ generate_text_report() {
         echo "   /Applications/Cursor.app ($size)"
         echo ""
         echo "   Application Structure:"
-        tree -L 2 -d "/Applications/Cursor.app/Contents" 2>/dev/null | head -30 || find "/Applications/Cursor.app/Contents" -type d -maxdepth 2 2>/dev/null | head -20
+        tree -L 2 -d "/Applications/Cursor.app/Contents" 2>/dev/null || find "/Applications/Cursor.app/Contents" -type d -maxdepth 2 2>/dev/null
     fi
     echo ""
 
@@ -351,13 +351,11 @@ generate_text_report() {
     echo "----------------------------------------"
     echo ""
     echo "Directories in ~/Library:"
-    find ~/Library -type d \( -name "*cursor*" -o -name "*Cursor*" \) 2>/dev/null | grep -v node_modules | head -30 | while read dir; do
+    find ~/Library -type d \( -name "*cursor*" -o -name "*Cursor*" \) 2>/dev/null | grep -v node_modules | while read dir; do
         if [ -d "$dir" ]; then
             echo "   $dir"
         fi
     done
-    echo ""
-    echo "(Showing first 30 results - use 'find' command for complete list)"
     echo ""
 
     echo "✅ Manifest saved to: ~/.cursor/CURSOR_DATA_MANIFEST.md"
