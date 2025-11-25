@@ -679,7 +679,7 @@ _0
 _archive/
 _artifacts/
 _plans/
-TIMELINE.json
+TIMELINE.template.json
 !TIMELINE.json
 promptpad.md
 TODOs.md
