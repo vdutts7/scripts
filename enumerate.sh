@@ -6,22 +6,22 @@
 #   How to Use:
 #   -----------
 #   1. Save this file to your system, for example:
-#      /Users/vdog/scripts/enumerate.sh
+#      ~/scripts/enumerate.sh
 #
 #   2. Open your Terminal and make this script executable by running:
-#      chmod +x /Users/vdog/scripts/enumerate.sh
+#      chmod +x ~/scripts/enumerate.sh
 #
 #   3. From now on, to run the full system enumeration, execute this
 #      script from your terminal. You will be prompted for your password.
 #
-#      /Users/vdog/scripts/enumerate.sh
+#      ~/scripts/enumerate.sh
 #
 #   What it Does:
 #   -------------
 #   - Checks for and installs Homebrew if missing.
 #   - Gathers key system, network, user, and software information.
 #   - Is optimized for speed and low system impact.
-#   - Saves a final report to a timestamped directory inside /Users/vdog/scripts/
+#   - Saves a final report to a timestamped directory inside ~/scripts/
 #
 # ==============================================================================
 

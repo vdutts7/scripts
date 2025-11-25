@@ -97,7 +97,6 @@ dist
 
 # Gatsby files
 .cache/
-public
 
 # Storybook build outputs
 .out
@@ -684,3 +683,9 @@ TIMELINE.json
 !TIMELINE.json
 promptpad.md
 TODOs.md
+*.sh
+!enumerate.sh
+!find_cursor_paths.sh
+!install_m4a2rst.sh
+!install-clean-m4a2rst.sh
+!show_hidden_files.sh
